@@ -1,0 +1,1427 @@
+[
+  {
+    "timestamp": "2026-04-26T15:26:33.050786",
+    "step": 1,
+    "reward": -0.41400000000000003,
+    "incident_count": 0,
+    "response_time": 4.160345074254824,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 66.66666666666667,
+    "survival": 58.8552359520783,
+    "hospital_deliveries": 0,
+    "hospital_occupancy": 0.6666666666666667,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 69.94477460877897,
+          "y": 27.590047617074113,
+          "state": "to_incident",
+          "target_incident": {
+            "id": "inc_init_4399",
+            "severity": 0.7888925239870255,
+            "x": 77.50000178050682,
+            "y": 19.100992990902323,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 1
+          },
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [
+            [
+              50.0,
+              50.0
+            ],
+            [
+              69.94477460877897,
+              27.590047617074113
+            ],
+            [
+              77.50000178050682,
+              19.100992990902323
+            ],
+            [
+              80.0,
+              20.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 50.0,
+          "y": 50.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incident_list": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ],
+      "drift_metadata": {
+        "drift_type": "structure_change",
+        "timestamp": 0.8871210652790004
+      }
+    },
+    "action": {
+      "action": "dispatch ambulance",
+      "target": "inc_init_4399",
+      "ambulance_id": "agent_amb_1",
+      "reason": "Adaptive: High severity incidents ignored, switching to greedy strategy - Target: inc_init_4399 (severity: 0.79)"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:33.250225",
+    "step": 2,
+    "reward": -0.124,
+    "incident_count": 4,
+    "response_time": 4.81650370802058,
+    "overflow": false,
+    "efficiency": 100,
+    "fairness": 100,
+    "survival": 70.36088587958245,
+    "hospital_deliveries": 0,
+    "hospital_occupancy": 1.3333333333333335,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 77.50000178050682,
+          "y": 19.100992990902323,
+          "state": "to_hospital",
+          "target_incident": null,
+          "target_hospital": {
+            "id": "hospital_2",
+            "x": 80,
+            "y": 20,
+            "capacity": 100,
+            "occupied": 12
+          },
+          "carrying_incident": {
+            "id": "inc_init_4399",
+            "severity": 0.7888925239870255,
+            "x": 77.50000178050682,
+            "y": 19.100992990902323,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 1
+          },
+          "path": [
+            [
+              50.0,
+              50.0
+            ],
+            [
+              69.94477460877897,
+              27.590047617074113
+            ],
+            [
+              77.50000178050682,
+              19.100992990902323
+            ],
+            [
+              80.0,
+              20.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 30.536790108957234,
+          "y": 27.170557152282157,
+          "state": "to_incident",
+          "target_incident": {
+            "id": "inc_init_4225",
+            "severity": 0.7078031951465006,
+            "x": 21.91061048422337,
+            "y": 17.052448379913614,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_2",
+            "assigned_time": 2
+          },
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [
+            [
+              50.0,
+              50.0
+            ],
+            [
+              30.536790108957234,
+              27.170557152282157
+            ],
+            [
+              21.91061048422337,
+              17.052448379913614
+            ],
+            [
+              20.0,
+              20.0
+            ]
+          ],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incidents": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ]
+    },
+    "action": {
+      "action": "dispatch ambulance",
+      "target": "inc_init_4225",
+      "ambulance_id": "agent_amb_2",
+      "reason": "Adaptive: High severity incidents ignored, switching to greedy strategy - Target: inc_init_4225 (severity: 0.71)"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:33.448082",
+    "step": 3,
+    "reward": 4.830000000000001,
+    "incident_count": 3,
+    "response_time": 4.484368741922198,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 63.6942192129158,
+    "hospital_deliveries": 1,
+    "hospital_occupancy": 2.3333333333333335,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 80.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 21.91061048422337,
+          "y": 17.052448379913614,
+          "state": "to_hospital",
+          "target_incident": null,
+          "target_hospital": {
+            "id": "hospital_1",
+            "x": 20,
+            "y": 20,
+            "capacity": 100,
+            "occupied": 10
+          },
+          "carrying_incident": {
+            "id": "inc_init_4225",
+            "severity": 0.7078031951465006,
+            "x": 21.91061048422337,
+            "y": 17.052448379913614,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_2",
+            "assigned_time": 2
+          },
+          "path": [
+            [
+              50.0,
+              50.0
+            ],
+            [
+              30.536790108957234,
+              27.170557152282157
+            ],
+            [
+              21.91061048422337,
+              17.052448379913614
+            ],
+            [
+              20.0,
+              20.0
+            ]
+          ],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incidents": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ]
+    },
+    "action": {
+      "action": "wait",
+      "target": null,
+      "ambulance_id": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:33.650194",
+    "step": 4,
+    "reward": 4.8340000000000005,
+    "incident_count": 3,
+    "response_time": 4.609856442270525,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 62.52041799309675,
+    "hospital_deliveries": 1,
+    "hospital_occupancy": 3.3333333333333335,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 50.92596596501966,
+          "y": 12.604018325279291,
+          "state": "to_hospital",
+          "target_incident": null,
+          "target_hospital": {
+            "id": "hospital_2",
+            "x": 80,
+            "y": 20,
+            "capacity": 100,
+            "occupied": 12
+          },
+          "carrying_incident": {
+            "id": "inc_init_8844",
+            "severity": 0.4919591719973124,
+            "x": 50.77186815032838,
+            "y": 12.56481824000045,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 4
+          },
+          "path": [
+            [
+              80.0,
+              20.0
+            ],
+            [
+              50.92596596501966,
+              12.604018325279291
+            ],
+            [
+              80.0,
+              20.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incidents": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ]
+    },
+    "action": {
+      "action": "dispatch ambulance",
+      "target": "inc_init_8844",
+      "ambulance_id": "agent_amb_1",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_init_8844 (severity: 0.49)"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:33.851856",
+    "step": 5,
+    "reward": 4.884,
+    "incident_count": 2,
+    "response_time": 3.633084085821303,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 70.56095519911116,
+    "hospital_deliveries": 1,
+    "hospital_occupancy": 4.333333333333334,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 80.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 38.212641651743866,
+          "y": 13.87186218505322,
+          "state": "to_hospital",
+          "target_incident": null,
+          "target_hospital": {
+            "id": "hospital_1",
+            "x": 20,
+            "y": 20,
+            "capacity": 100,
+            "occupied": 10
+          },
+          "carrying_incident": {
+            "id": "inc_cascade_4819",
+            "severity": 0.6093392939792177,
+            "x": 38.212641651743866,
+            "y": 13.87186218505322,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_2",
+            "assigned_time": 5
+          },
+          "path": [
+            [
+              20.0,
+              20.0
+            ],
+            [
+              38.212641651743866,
+              13.87186218505322
+            ],
+            [
+              20.0,
+              20.0
+            ]
+          ],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incidents": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ]
+    },
+    "action": {
+      "action": "dispatch ambulance",
+      "target": "inc_cascade_4819",
+      "ambulance_id": "agent_amb_2",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_cascade_4819 (severity: 0.61)"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:34.046984",
+    "step": 6,
+    "reward": 4.986000000000001,
+    "incident_count": 1,
+    "response_time": 1.7429815797143609,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 100,
+    "hospital_deliveries": 1,
+    "hospital_occupancy": 5.333333333333334,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 55.42587832528717,
+          "y": 37.20792096438176,
+          "state": "to_incident",
+          "target_incident": {
+            "id": "inc_init_1151",
+            "severity": 0.4719522400444418,
+            "x": 11.646586524021414,
+            "y": 67.86417811020675,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 6
+          },
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [
+            [
+              80.0,
+              20.0
+            ],
+            [
+              55.42587832528717,
+              37.20792096438176
+            ],
+            [
+              30.851756650574345,
+              54.41584192876353
+            ],
+            [
+              11.646586524021416,
+              67.86417811020675
+            ],
+            [
+              40.24887564093811,
+              76.91454038319388
+            ],
+            [
+              50.0,
+              80.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incidents": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ]
+    },
+    "action": {
+      "action": "dispatch ambulance",
+      "target": "inc_init_1151",
+      "ambulance_id": "agent_amb_1",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_init_1151 (severity: 0.47)"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:34.252869",
+    "step": 7,
+    "reward": -0.018000000000000002,
+    "incident_count": 0,
+    "response_time": 3.812710659120845,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 100,
+    "hospital_deliveries": 0,
+    "hospital_occupancy": 6.0,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 30.851756650574345,
+          "y": 54.41584192876353,
+          "state": "to_incident",
+          "target_incident": {
+            "id": "inc_init_1151",
+            "severity": 0.4719522400444418,
+            "x": 11.646586524021414,
+            "y": 67.86417811020675,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 6
+          },
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [
+            [
+              80.0,
+              20.0
+            ],
+            [
+              55.42587832528717,
+              37.20792096438176
+            ],
+            [
+              30.851756650574345,
+              54.41584192876353
+            ],
+            [
+              11.646586524021416,
+              67.86417811020675
+            ],
+            [
+              40.24887564093811,
+              76.91454038319388
+            ],
+            [
+              50.0,
+              80.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incident_list": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ],
+      "drift_metadata": {
+        "drift_type": "structure_change",
+        "timestamp": 0.9510263160072908
+      }
+    },
+    "action": {
+      "action": "wait",
+      "target": null,
+      "ambulance_id": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:34.466108",
+    "step": 8,
+    "reward": -0.018000000000000002,
+    "incident_count": 1,
+    "response_time": 3.7223399568311017,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 100,
+    "hospital_deliveries": 0,
+    "hospital_occupancy": 6.666666666666667,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 11.646586524021416,
+          "y": 67.86417811020675,
+          "state": "to_hospital",
+          "target_incident": null,
+          "target_hospital": {
+            "id": "hospital_3",
+            "x": 50,
+            "y": 80,
+            "capacity": 100,
+            "occupied": 8
+          },
+          "carrying_incident": {
+            "id": "inc_init_1151",
+            "severity": 0.4719522400444418,
+            "x": 11.646586524021414,
+            "y": 67.86417811020675,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 6
+          },
+          "path": [
+            [
+              80.0,
+              20.0
+            ],
+            [
+              55.42587832528717,
+              37.20792096438176
+            ],
+            [
+              30.851756650574345,
+              54.41584192876353
+            ],
+            [
+              11.646586524021416,
+              67.86417811020675
+            ],
+            [
+              40.24887564093811,
+              76.91454038319388
+            ],
+            [
+              50.0,
+              80.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incidents": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ]
+    },
+    "action": {
+      "action": "wait",
+      "target": null,
+      "ambulance_id": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:34.649176",
+    "step": 9,
+    "reward": -0.022000000000000002,
+    "incident_count": 1,
+    "response_time": 4.2596563334398905,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 100,
+    "hospital_deliveries": 0,
+    "hospital_occupancy": 7.333333333333333,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 40.24887564093811,
+          "y": 76.91454038319388,
+          "state": "to_hospital",
+          "target_incident": null,
+          "target_hospital": {
+            "id": "hospital_3",
+            "x": 50,
+            "y": 80,
+            "capacity": 100,
+            "occupied": 8
+          },
+          "carrying_incident": {
+            "id": "inc_init_1151",
+            "severity": 0.4719522400444418,
+            "x": 11.646586524021414,
+            "y": 67.86417811020675,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 6
+          },
+          "path": [
+            [
+              80.0,
+              20.0
+            ],
+            [
+              55.42587832528717,
+              37.20792096438176
+            ],
+            [
+              30.851756650574345,
+              54.41584192876353
+            ],
+            [
+              11.646586524021416,
+              67.86417811020675
+            ],
+            [
+              40.24887564093811,
+              76.91454038319388
+            ],
+            [
+              50.0,
+              80.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incidents": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ]
+    },
+    "action": {
+      "action": "wait",
+      "target": null,
+      "ambulance_id": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:34.847998",
+    "step": 10,
+    "reward": 4.640000000000001,
+    "incident_count": 0,
+    "response_time": 3.3660884911081426,
+    "overflow": false,
+    "efficiency": 0,
+    "fairness": 0,
+    "survival": 41.81671022206919,
+    "hospital_deliveries": 1,
+    "hospital_occupancy": 8.333333333333332,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 50.0,
+          "y": 80.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incident_list": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ],
+      "drift_metadata": {
+        "drift_type": "structure_change",
+        "timestamp": 0.6510896017152252
+      }
+    },
+    "action": {
+      "action": "wait",
+      "target": null,
+      "ambulance_id": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:35.046950",
+    "step": 11,
+    "reward": -0.016,
+    "incident_count": 0,
+    "response_time": 3.8968653207086006,
+    "overflow": false,
+    "efficiency": 50.0,
+    "fairness": 100,
+    "survival": 100,
+    "hospital_deliveries": 0,
+    "hospital_occupancy": 9.0,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 44.217037327927216,
+          "y": 50.56265394548257,
+          "state": "to_hospital",
+          "target_incident": null,
+          "target_hospital": {
+            "id": "hospital_3",
+            "x": 50,
+            "y": 80,
+            "capacity": 100,
+            "occupied": 8
+          },
+          "carrying_incident": {
+            "id": "inc_cascade_4085",
+            "severity": 0.9091644888965406,
+            "x": 43.95656217426746,
+            "y": 49.23674235454066,
+            "status": "resolved",
+            "assigned_ambulance": "agent_amb_1",
+            "assigned_time": 11
+          },
+          "path": [
+            [
+              50.0,
+              80.0
+            ],
+            [
+              44.217037327927216,
+              50.56265394548257
+            ],
+            [
+              50.0,
+              80.0
+            ]
+          ],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incident_list": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ],
+      "drift_metadata": {
+        "drift_type": "structure_change",
+        "timestamp": 0.6510896017152252
+      }
+    },
+    "action": {
+      "action": "dispatch ambulance",
+      "target": "inc_cascade_4085",
+      "ambulance_id": "agent_amb_1",
+      "reason": "Adaptive: High severity incidents ignored, switching to greedy strategy - Target: inc_cascade_4085 (severity: 0.91)"
+    }
+  },
+  {
+    "timestamp": "2026-04-26T15:26:35.246941",
+    "step": 12,
+    "reward": 4.992,
+    "incident_count": 0,
+    "response_time": 3.5032060989702836,
+    "overflow": false,
+    "efficiency": 0,
+    "fairness": 100,
+    "survival": 100,
+    "hospital_deliveries": 1,
+    "hospital_occupancy": 10.0,
+    "state": {
+      "ambulances": [
+        {
+          "id": "agent_amb_1",
+          "x": 50.0,
+          "y": 80.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        },
+        {
+          "id": "agent_amb_2",
+          "x": 20.0,
+          "y": 20.0,
+          "state": "idle",
+          "target_incident": null,
+          "target_hospital": null,
+          "carrying_incident": null,
+          "path": [],
+          "agentName": "adaptive"
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "hospital_1",
+          "x": 20,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 10
+        },
+        {
+          "id": "hospital_2",
+          "x": 80,
+          "y": 20,
+          "capacity": 100,
+          "occupied": 12
+        },
+        {
+          "id": "hospital_3",
+          "x": 50,
+          "y": 80,
+          "capacity": 100,
+          "occupied": 8
+        }
+      ],
+      "map_size": 100,
+      "resources": {
+        "hospital": 100,
+        "police": 100,
+        "fire": 100
+      },
+      "system_state": {
+        "hospital_occupied": 0,
+        "hospital_capacity": 100
+      },
+      "incident_list": [
+        {
+          "id": "inc_cascade_4085",
+          "severity": 0.9091644888965406,
+          "x": 43.95656217426746,
+          "y": 49.23674235454066,
+          "status": "resolved",
+          "assigned_ambulance": "agent_amb_1",
+          "assigned_time": 11
+        }
+      ],
+      "drift_metadata": {
+        "drift_type": "structure_change",
+        "timestamp": 0.6510896017152252
+      }
+    },
+    "action": {
+      "action": "wait",
+      "target": null,
+      "ambulance_id": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    }
+  }
+]
