@@ -217,4 +217,4 @@ The combination of structured reward signal *and* natural language reflection lo
 
 ---
 
-*Built at the OpenEnv Hackathon India 2026 ·*Team: Bhuvan M H (reinforceX) · HuggingFace: Bmh-18*
+*Built at the OpenEnv Hackathon India 2026 ·*Team: Bhuvan M H, Harikrishna G(reinforceX) · HuggingFace: Bmh-18*
